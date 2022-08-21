@@ -18,7 +18,7 @@
  </div>
  <!--add timer to top left-->
  <div>
-    <p>Time Left: 60 seconds</p>
+    <p id="timer">Time Left: 60 seconds</p>
  </div>
 </Header>
 <!--add the heading, introduction and start quiz button-->
@@ -27,7 +27,7 @@
         <H1>A Quick Coding Quiz</H1>
         <p id="instructions">Try to answer the following code-related questions within the time limit. Keep in mind the incorrect answers will penalise your score/time by ten seconds!      
         </p>
-        <Button>Start Quiz</Button>
+        <Button id="start_quiz">Start Quiz</Button>
     </section>
 </Div>
 <!--add in the question page-->
@@ -44,15 +44,15 @@
 
 <!--This is for the Submit of Initials-->
 
-<Section>
+<Section class="final_score">
     <H2>All Done!</H2>
-    <p>Your final score is:</p>
+    <p id="show_score">Your final score is:</p>
     <form>
-        <Div>
+        <Div id="initials">
         <label for="Initials">Enter your initials: </label>
           <input type="text" name="Initials" id="initials" required>
         </div>
-        <div>
+        <div id="sumbit_button">
            <input type="submit" value="Submit!">
         </div>
     </form> 
@@ -63,11 +63,11 @@
 
 <!--Highschores Page-->
 <Div>
-    <section class = "High Scores">
+    <section class = "high_score">
         <H1>Highscores</H1>
         <div id="score_record"><p>Your record</p></div>      
-        <Button>Go Back</Button>
-        <Button>Clear Highscores</Button>
+        <Button id="back_button">Go Back</Button>
+        <Button id="clear_score">Clear Highscores</Button>
     </section>
 </Div>
 
