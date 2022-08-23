@@ -89,7 +89,7 @@ var timerInterval = setInterval(function() {
 function showQestion (n) {
     askQuestion.textContent = questions[n].question;
         answerButton1.textContent = questions[n].choices[0];
-        answerButton2.textContent = questions[n].choices[1];
+        answerButton2.textcontent = questions[n].choices[1];
         answerButton3.textContent = questions[n].choices[2];
         answerButton4.textContent = questions[n].choices[3];
         questionNumber = n;
