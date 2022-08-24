@@ -20,7 +20,7 @@ var showScore =document.querySelector("#show_score");
 var initials =document.querySelector("#initials");
 var submitButton =document.querySelector("#submit_button");
 
-var highscore =document.querySelector("#high_score");
+var highScore =document.querySelector("#high_score");
 var scoreRecords =document.querySelector("#score_record");
 var backButton =document.querySelector("#back_button");
 var clearScore =document.querySelector("#clear_score");
@@ -56,7 +56,17 @@ var questions = [
 var secondsLeft = 60;
 var questionNumber = 0;
 var totalScore = 0;
-var questionCount = 1;
+var questionCount = 0;
+
+
+// Hide the cards
+function hideCards() {
+    introductionPage.setAttribute("hidden", true);
+    questionPage.setAttribute("hidden", true);
+    finalScore.setAttribute("hidden", true);
+    highScore.setAttribute("hidden", true);
+  }
+
 
 // start the quiz
 
@@ -67,7 +77,7 @@ function startQuiz() {
     timeLeft.textContent = "Time Left:" + secondsLeft + "seconds";
     
     setTimer();
-    showQestion(questionNumber);
+    showQestion();
     
     };
     
@@ -85,24 +95,39 @@ var timerInterval = setInterval(function() {
 
 };
 
+//get question
+
+
+
 //Show questions
-function showQestion (n) {
-    askQuestion.textContent = questions[n].question;
-        answerButton1.textContent = questions[n].choices[0];
-        answerButton2.textcontent = questions[n].choices[1];
-        answerButton3.textContent = questions[n].choices[2];
-        answerButton4.textContent = questions[n].choices[3];
-        questionNumber = n;
-              
-        };
+function showQestion () {
+ //   askQuestion.textContent = questions[n].question;
+ //     answerButton1.textContent = questions[n].choices[0];
+ //     answerButton2.textContent = questions[n].choices[1];
+ //       answerButton3.textContent = questions[n].choices[2];
+ //       answerButton4.textContent = questions[n].choices[3];
+  //    questionNumber = n;
+  var currentQuestion = questions[questionCount];
+  askQuestion.textContent = currentQuestion.title;  
+  
+//  for ( var i = 0; i < currentQuestion.choices.length; i++ ) { 
+//               var choice = currentQuestion.choices[i];
+          askQuestion.textContent = currentQuestion.question; 
+          answerButton1.textContent = currentQuestion.choices[0]
+          answerButton2.textContent = currentQuestion.choices[1] 
+          answerButton3.textContent = currentQuestion.choices[2]
+          answerButton4.textContent = currentQuestion.choices[3]
+  //      };
+
+    }
+// Check answer
+    function checkAnswer() {
 
 
-// answer buttons
+    }
 
 
-
-
-//correct or wrong including sound
+//correct or wrong 
 
 
 // enter initials
