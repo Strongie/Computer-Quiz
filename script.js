@@ -1,23 +1,23 @@
 const questions = [
     
     {   questionText: "Commonly used data types DO NOT include:",
-        options: [{choice: "1. strings"}, {choice: "2. booleans"}, {choice: "3. alerts"}, {choice: "4. numbers"}],
-        answer: "b"
+        options: ["1. strings", "2. booleans", "3. alerts", "4. numbers"],
+        answer: "2. booleans",
     },
     {
         questionText: "The conditions in an if / else statement is enclosed within ....?",
-        options: [{choice: "1. quotes"}, {choice: "2. curly brackets"}, {choice: "3. paranthesis"}, {choice: "4. square brackets"}],
-        answer: "a"
+        options: ["1. quotes", "2. curly brackets", "3. paranthesis", "4. square brackets"],
+        answer: "1. quotes",
     },
     {
         questionText: "Arrays in Javascript can be used to store:",
-        options: [{choice: '1. numbers'}, {choice: '2. booleans'}, {choice: '3. strings'}, {choice: '4. all of the above'}],
-        answer: "d"
+        options: ['1. numbers', '2. booleans', '3. strings', '4. all of the above'],
+        answer: "4. all of the above",
     },
     {
         questionText: "String values must be enclosed within ......... when being assigned variables.",
-        Options: [{choice: "1. commas"},{choice: "2. curly brackets"}, {choice: "3. quotes"},{choice: "4. paranthesis"}],
-        answer: "b"
+        Options: ["1. commas","2. curly brackets", "3. quotes","4. paranthesis"],
+        answer: "2. curly brackets",
     },
     
 ];
