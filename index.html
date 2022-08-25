@@ -6,61 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--add title header and link to the style sheet--> 
     <title>a timed quiz about coding terminology designed for testing students coding</title>
-    <link rel="stylesheet" href="./css.style">
+    <link rel="stylesheet" href="./style.css">
      
 </head>
 <body>
-<!--Quiz Page-->
-<Header class = "mainHeader">
+
+   
+<Header>
 <!--add high scores to the top right-->
- <div>
-    <h4 id="view-high-scores">View Highscores</h4>
-  <!--add timer to top left-->
-    <h4 class="timer">Time Left: <span id="timer"></span></h4>)
- </div>
+<a id=leaderboard-link>View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
+</i></a> 
+<!--add timer to top left-->
+<time>Time: <span id="time"></span></time>
 </Header>
+
 <!--add the heading, introduction and start quiz button-->
-<Div id ='starter-container' class ='show'>
-    <section class = "container-start">
-        <H1>A Quick Coding Quiz</H1>
-        <p id="instructions">Try to answer the following code-related questions within the time limit. Keep in mind the incorrect answers will penalise your score/time by ten seconds!      
-        </p>
-        <Button class ='btn startend' id="start-garme">Start Quiz</Button>
-    </section>
-</Div>
-<!--add in the question page-->
-<div id="question-container" class = "hide">
-    <section class="container-questions">
-        <div id="question"></div>
-<!--this section is for answer buttons-->
-        <div id="answer-buttons" class= "btn-grid"></div>
-    </section>
+<div>
+    <div id=start-card class="card">
+        <h2 id=title>Coding Quiz Challenge</h2>
+        <p>Try to answer to following code-related questions within the time limit. <br><br> Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+        <button id=start-button class="button">Start Quiz</button>
+    </div>
+
 </div>
+<!--add in the question page-->
+
+<div hidden id=question-card class="card">
+
+    <h2 id=question-text></h2>
+
+    <div id=quiz-options>
+        <button id=option0 class="button option-button"></button>
+        <button id=option1 class="button option-button"></button>
+        <button id=option2 class="button option-button"></button>
+        <button id=option3 class="button option-button"></button>
+    </div>
+
+<!--Correct or Wrong-->
+<div id=result-div>
+    <hr>
+    <p id=result-text></p>
+</div>
+
+</div>
+
 
 <!--End and submit initials-->
-<div id="end-container" class="hide">
-    <div class = "container-end">
-        <div id = "score-banner">
-            <h1>All Done!</h1>
+<div hidden id=score-card class="card">
+    <h2>All done!</h2>
+    <p>Your final score is <span id=score></span>.</p>
+    <form class="inline-form" id="submission-form">
+          <label for="initials">Enter initials: </label>
+          <input type="text" id="initials">
+          <button id="submit-button" class="button">Submit</button>
+    </form>
 </div>
-<form id = 'initials-form' class = 'initials'>
-    <p>Enter Initials:
-        <input type="text" name="initials" class="text-input"/>
-        <button class="btn startend" id="submit-score" type="submit"> Submit </button> </p>
-</form>
-</div>
-
 
 <!--Highschores Page-->
-<Div id="'high-score-container" class ="hide">
-    <section class = "high-scores-container">
-        <h1 class ="high-score">Highscores</h1>
-        <ol id="high-score-list" class ="score-list"></ol>
-    </section>
-    <div>
-        <Button id="go-back" class = "btn">Go Back</Button>
-        <Button id="clear-high-scores" class ="btn">Clear Highscores</Button>
+<div hidden id=leaderboard-card class="card">
+    <h2>Highscores</h2>
+    <ol id="highscore-list">
+    </ol>
+    <div class="inline-buttons">
+        <button id="back-button" class="button">Go Back</button>
+        <button id="clear-button" class="button">Clear Highscores</button>
     </div>
+</div>
+
  </Div>
 
 <!--add link to javascript sheet-->
